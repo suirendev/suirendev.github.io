@@ -363,25 +363,13 @@
     background: var(--bg-panel);
     border: 1px solid var(--border);
     border-radius: 12px;
-    transition: all 0.3s;
     position: relative;
     overflow: hidden;
+    cursor: default;
   }
   .service-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
-    opacity: 0;
-    transition: opacity 0.3s;
+    content: none;
   }
-  .service-card:hover {
-    border-color: var(--cyan);
-    background: var(--bg-panel-hover);
-    transform: translateY(-4px);
-  }
-  .service-card:hover::before { opacity: 1; }
 
   .service-num {
     font-family: 'JetBrains Mono', monospace;
@@ -426,10 +414,36 @@
     border-radius: 12px;
     overflow: hidden;
     transition: all 0.3s;
+    position: relative;
+    cursor: default;
   }
-  .work-card:hover {
+  .work-card--modal {
+    cursor: pointer;
+  }
+  .work-card--modal:hover,
+  .work-card--modal:focus-visible {
     border-color: var(--cyan);
     transform: translateY(-4px);
+  }
+  .work-card--modal:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 4px;
+  }
+  .work-view-tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    padding: 6px 9px;
+    border: 1px solid var(--cyan);
+    border-radius: 4px;
+    background: rgba(10, 11, 15, 0.88);
+    color: var(--cyan);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1;
   }
   .work-thumb {
     aspect-ratio: 16/9;
@@ -459,6 +473,204 @@
     font-size: 13px;
     color: var(--text-sub);
     margin-bottom: 14px;
+  }
+
+  .work-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .work-action-link.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: 11px;
+    line-height: 1.2;
+  }
+
+  /* ===== CASE FILE MODAL ===== */
+  body.modal-open { overflow: hidden; }
+
+  .case-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0s linear 0.25s;
+  }
+  .case-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0s;
+  }
+  .case-modal__panel {
+    position: relative;
+    width: min(100%, 1040px);
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+    padding: 34px;
+    border: 1px solid var(--cyan);
+    border-radius: 12px;
+    background:
+      radial-gradient(circle at 12% 0%, rgba(0, 217, 255, 0.10), transparent 38%),
+      linear-gradient(145deg, rgba(8, 31, 28, 0.99), rgba(13, 15, 23, 0.99) 52%, rgba(8, 24, 24, 0.99));
+    box-shadow: 0 0 28px rgba(0, 217, 255, 0.20), 0 24px 80px rgba(0, 0, 0, 0.65);
+    transform: scale(0.96);
+    transition: transform 0.25s ease;
+  }
+  .case-modal.is-open .case-modal__panel { transform: scale(1); }
+  .case-modal__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: rgba(10, 11, 15, 0.9);
+    color: var(--text-main);
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .case-modal__close:hover,
+  .case-modal__close:focus-visible {
+    border-color: var(--cyan);
+    color: var(--cyan);
+    outline: none;
+  }
+  .case-modal__header {
+    padding-right: 58px;
+    margin-bottom: 24px;
+  }
+  .case-modal__label {
+    margin-bottom: 8px;
+    color: var(--cyan);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+  }
+  .case-modal__title {
+    font-family: 'Orbitron', 'Noto Sans JP', sans-serif;
+    font-size: clamp(22px, 3.5vw, 34px);
+    line-height: 1.3;
+  }
+  .case-modal__media {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr) 48px;
+    gap: 12px;
+    align-items: center;
+  }
+  .case-modal__media--single {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .case-modal__frame {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--cyan);
+    border-radius: 8px;
+    background: #05080b;
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.18);
+  }
+  .case-modal__image {
+    display: block;
+    width: 100%;
+    max-height: min(58vh, 620px);
+    object-fit: contain;
+  }
+  .case-modal__nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: rgba(10, 11, 15, 0.92);
+    color: var(--text-main);
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .case-modal__nav[hidden],
+  .case-modal__dots[hidden],
+  .case-modal__counter[hidden] {
+    display: none;
+  }
+  .case-modal__nav:hover,
+  .case-modal__nav:focus-visible {
+    border-color: var(--cyan);
+    color: var(--cyan);
+    outline: none;
+  }
+  .case-modal__dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .case-modal__dot {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 1px solid var(--cyan);
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+  }
+  .case-modal__dot.is-active {
+    background: var(--cyan);
+    box-shadow: 0 0 10px var(--cyan-glow);
+  }
+  .case-modal__description {
+    max-width: 820px;
+    margin: 24px auto 0;
+    color: var(--text-sub);
+    font-size: 14px;
+  }
+  .case-modal__counter {
+    margin-top: 10px;
+    color: var(--text-mute);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    .case-modal__panel { padding: 24px 16px; }
+    .case-modal__header { padding-right: 54px; }
+    .case-modal__media { display: block; position: relative; }
+    .case-modal__nav {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      width: 44px;
+      height: 44px;
+      transform: translateY(-50%);
+    }
+    .case-modal__nav--prev { left: 8px; }
+    .case-modal__nav--next { right: 8px; }
+    .case-modal__image { max-height: 52vh; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .case-modal,
+    .case-modal__panel { transition: none; }
   }
 
   /* ===== FOOTER ===== */
@@ -581,7 +793,7 @@
           ・Notion 設計・運用（コンテキスト管理・財務管理・キャラマスター）<br>
           ・配信テクノロジー（OBS自動化・カスタムパネル・字幕翻訳）<br>
           ・キャラクターデザイン・LINEスタンプ制作<br>
-          ・HTML / CSS / JavaScript / GAS<br>
+          ・HTML / CSS / JavaScript / Automation<br>
           ・ブランディング・クリエイティブディレクション
         </p>
       </div>
@@ -596,7 +808,7 @@
     <h2 class="section-title">提供できるサービス</h2>
     <p class="section-desc">企画・設計・実装・運用まで一気通貫で対応します。スポット相談から継続契約まで、規模感に合わせて柔軟に組めます。</p>
     <div class="services-grid">
-      <div class="service-card">
+      <div class="service-card service-card--static">
         <div class="service-num">SVC_01</div>
         <h3 class="service-title">AI × Notion ワークフロー設計</h3>
         <p class="service-desc">業務基盤の整備、AI活用の運用設計、コンテキスト管理システム構築。「動き続けるNotion」を作ります。</p>
@@ -604,7 +816,7 @@
           <span class="tag">Notion</span><span class="tag">AI Integration</span><span class="tag">Workflow</span>
         </div>
       </div>
-      <div class="service-card">
+      <div class="service-card service-card--static">
         <div class="service-num">SVC_02</div>
         <h3 class="service-title">配信者向けカスタムツール開発</h3>
         <p class="service-desc">カスタムマッチ集計・配信オーバーレイ・OBSパネル等、配信現場の課題を解決するWebツールを制作。</p>
@@ -612,7 +824,7 @@
           <span class="tag">HTML</span><span class="tag">JavaScript</span><span class="tag">OBS</span>
         </div>
       </div>
-      <div class="service-card">
+      <div class="service-card service-card--static">
         <div class="service-num">SVC_03</div>
         <h3 class="service-title">配信環境構築サポート</h3>
         <p class="service-desc">OBS自動化、配信パネル自作、テクニカル課題の解決。「配信者の現場感」がわかる設計を提供。</p>
@@ -620,7 +832,7 @@
           <span class="tag">OBS</span><span class="tag">WebSocket</span><span class="tag">Automation</span>
         </div>
       </div>
-      <div class="service-card">
+      <div class="service-card service-card--static">
         <div class="service-num">SVC_04</div>
         <h3 class="service-title">LINEスタンプ・キャラデザ制作</h3>
         <p class="service-desc">企画・制作・販売登録までワンストップ対応。複数シリーズの販売実績あり。</p>
@@ -639,7 +851,8 @@
     <h2 class="section-title">主な実績</h2>
     <p class="section-desc">企画から実装、運用までを自分の手で回した制作物です。</p>
     <div class="works-grid">
-      <div class="work-card">
+      <div class="work-card work-card--modal" data-case="case01" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="case-modal" aria-label="APEXカスタムマッチ用スコアボードの詳細を見る">
+        <span class="work-view-tag" aria-hidden="true">＋ VIEW</span>
         <div class="work-thumb">🏆</div>
         <div class="work-body">
           <div class="work-cat">// Streaming Tech</div>
@@ -650,7 +863,8 @@
           </div>
         </div>
       </div>
-      <div class="work-card">
+      <div class="work-card work-card--modal" data-case="case02" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="case-modal" aria-label="OBS配信制御パネルの詳細を見る">
+        <span class="work-view-tag" aria-hidden="true">＋ VIEW</span>
         <div class="work-thumb">🎛️</div>
         <div class="work-body">
           <div class="work-cat">// Streaming Tech</div>
@@ -661,7 +875,7 @@
           </div>
         </div>
       </div>
-      <div class="work-card">
+      <div class="work-card work-card--static">
         <div class="work-thumb">🌐</div>
         <div class="work-body">
           <div class="work-cat">// AI × Streaming</div>
@@ -670,9 +884,12 @@
           <div class="service-tags">
             <span class="tag">Whisper</span><span class="tag">DeepL</span><span class="tag">Python</span>
           </div>
+          <div class="work-actions">
+            <a class="btn btn-ghost work-action-link" href="https://github.com/suirendev/obs-translation" target="_blank" rel="noopener noreferrer" aria-label="OBSリアルタイム翻訳字幕システムのGitHubリポジトリを新しいタブで開く">GitHub ↗</a>
+          </div>
         </div>
       </div>
-      <div class="work-card">
+      <div class="work-card work-card--static">
         <div class="work-thumb">🧠</div>
         <div class="work-body">
           <div class="work-cat">// AI Workflow</div>
@@ -683,18 +900,19 @@
           </div>
         </div>
       </div>
-      <div class="work-card">
+      <div class="work-card work-card--modal" data-case="case05" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="case-modal" aria-label="カレンダー画像からGoogle Calendarへ一括登録する仕組みの詳細を見る">
+        <span class="work-view-tag" aria-hidden="true">＋ VIEW</span>
         <div class="work-thumb">📅</div>
         <div class="work-body">
-          <div class="work-cat">// Automation</div>
-          <h3 class="work-title">GAS × Google Calendar<br>自動連携スクリプト</h3>
-          <p class="work-desc">OCR入力データから繰り返しイベントをGoogle Calendarへ自動登録。年月自動取得・削除関数まで自前実装。</p>
+          <div class="work-cat">// AI × Automation</div>
+          <h3 class="work-title">カレンダー画像 →<br>Google Calendar 一括登録</h3>
+          <p class="work-desc">手書き・アプリのカレンダー写真をAIが読み取り、予定リスト（JSON）化してGoogleカレンダーへ終日イベント＋色分けで一括登録。職場固有の情報を扱わないプライバシー設計。1ヶ月分の転記が数分で完了。</p>
           <div class="service-tags">
-            <span class="tag">GAS</span><span class="tag">Google API</span>
+            <span class="tag">Claude</span><span class="tag">Google Calendar API</span><span class="tag">Automation</span>
           </div>
         </div>
       </div>
-      <div class="work-card">
+      <div class="work-card work-card--static">
         <div class="work-thumb">😺</div>
         <div class="work-body">
           <div class="work-cat">// Character IP</div>
@@ -703,11 +921,35 @@
           <div class="service-tags">
             <span class="tag">LINE Stamp</span><span class="tag">Character</span>
           </div>
+          <div class="work-actions">
+            <a class="btn btn-ghost work-action-link" href="https://store.line.me/stickershop/author/5956680/ja" target="_blank" rel="noopener noreferrer">LINE STORE ↗</a>
+            <a class="btn btn-ghost work-action-link" href="https://www.twitch.tv/somari17suiren" target="_blank" rel="noopener noreferrer">Twitch ↗</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<div class="case-modal" id="case-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="case-modal-title" aria-describedby="case-modal-description">
+  <div class="case-modal__panel">
+    <button class="case-modal__close" type="button" aria-label="詳細を閉じる">×</button>
+    <header class="case-modal__header">
+      <div class="case-modal__label" id="case-modal-label">// CASE_01</div>
+      <h2 class="case-modal__title" id="case-modal-title"></h2>
+    </header>
+    <div class="case-modal__media">
+      <button class="case-modal__nav case-modal__nav--prev" type="button" aria-label="前の画像">←</button>
+      <div class="case-modal__frame">
+        <img class="case-modal__image" id="case-modal-image" alt="実績の詳細画像" loading="lazy">
+      </div>
+      <button class="case-modal__nav case-modal__nav--next" type="button" aria-label="次の画像">→</button>
+    </div>
+    <div class="case-modal__dots" id="case-modal-dots" aria-label="画像を選択"></div>
+    <div class="case-modal__counter" id="case-modal-counter" aria-live="polite"></div>
+    <p class="case-modal__description" id="case-modal-description"></p>
+  </div>
+</div>
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer" id="contact">
@@ -724,6 +966,183 @@
     </div>
   </div>
 </footer>
+
+<script>
+  (() => {
+    const caseFiles = {
+      case01: {
+        label: '// CASE_01',
+        title: 'APEXカスタムマッチ用スコアボード',
+        description: 'HTML単体で20チームに対応し、キルと順位ポイントの自動計算、キャラクターピック集計まで統合したカスタムマッチ運営用ツールです。',
+        images: [
+          {
+            src: 'assets/work-apex-scoreboard-1.png',
+            alt: 'APEXカスタムマッチ用スコアボードの設定とスコア入力画面'
+          },
+          {
+            src: 'assets/work-apex-scoreboard-2.png',
+            alt: 'APEXカスタムマッチ用スコアボードのチーム入力欄と集計操作画面'
+          }
+        ]
+      },
+      case02: {
+        label: '// CASE_02',
+        title: 'OBS配信制御パネル（カスタムStream Deck）',
+        description: 'obs-websocket-js v5で構築したブラウザベースの配信パネルです。シーン切り替え、録画、マイク、BGMなど、配信中の操作を一画面にまとめています。',
+        images: [
+          {
+            src: 'assets/work-obs-streamdeck.png',
+            alt: '配信準備やシーン切り替えを操作するカスタムStream Deckパネル'
+          }
+        ]
+      },
+      case05: {
+        label: '// CASE_05',
+        title: 'カレンダー画像 → Google Calendar 一括登録',
+        description: '手書きやアプリのカレンダー画像をAIが読み取り、予定リストに変換してGoogleカレンダーへ終日イベントと色分けをまとめて登録する仕組みです。',
+        images: [
+          {
+            src: 'assets/work-calendar-import.png',
+            alt: 'カレンダー画像を予定リストに変換してGoogleカレンダーへ登録する3段階のフロー図'
+          }
+        ]
+      }
+    };
+
+    const modal = document.getElementById('case-modal');
+    const panel = modal.querySelector('.case-modal__panel');
+    const closeButton = modal.querySelector('.case-modal__close');
+    const media = modal.querySelector('.case-modal__media');
+    const previousButton = modal.querySelector('.case-modal__nav--prev');
+    const nextButton = modal.querySelector('.case-modal__nav--next');
+    const label = document.getElementById('case-modal-label');
+    const title = document.getElementById('case-modal-title');
+    const image = document.getElementById('case-modal-image');
+    const dots = document.getElementById('case-modal-dots');
+    const counter = document.getElementById('case-modal-counter');
+    const description = document.getElementById('case-modal-description');
+    const modalCards = document.querySelectorAll('.work-card--modal[data-case]');
+
+    let activeCase = null;
+    let activeImageIndex = 0;
+    let triggerCard = null;
+
+    const renderImage = () => {
+      const imageData = activeCase.images[activeImageIndex];
+      const hasMultipleImages = activeCase.images.length > 1;
+
+      image.src = imageData.src;
+      image.alt = imageData.alt;
+      previousButton.hidden = !hasMultipleImages;
+      nextButton.hidden = !hasMultipleImages;
+      dots.hidden = !hasMultipleImages;
+      counter.hidden = !hasMultipleImages;
+      media.classList.toggle('case-modal__media--single', !hasMultipleImages);
+      counter.textContent = hasMultipleImages
+        ? `${activeImageIndex + 1} / ${activeCase.images.length}`
+        : '';
+
+      dots.replaceChildren();
+      if (hasMultipleImages) {
+        activeCase.images.forEach((_, index) => {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = `case-modal__dot${index === activeImageIndex ? ' is-active' : ''}`;
+          dot.setAttribute('aria-label', `画像 ${index + 1} を表示`);
+          dot.setAttribute('aria-current', index === activeImageIndex ? 'true' : 'false');
+          dot.addEventListener('click', () => {
+            activeImageIndex = index;
+            renderImage();
+          });
+          dots.appendChild(dot);
+        });
+      }
+    };
+
+    const changeImage = (direction) => {
+      const imageCount = activeCase.images.length;
+      activeImageIndex = (activeImageIndex + direction + imageCount) % imageCount;
+      renderImage();
+    };
+
+    const openModal = (card) => {
+      const caseData = caseFiles[card.dataset.case];
+      if (!caseData) return;
+
+      activeCase = caseData;
+      activeImageIndex = 0;
+      triggerCard = card;
+      label.textContent = caseData.label;
+      title.textContent = caseData.title;
+      description.textContent = caseData.description;
+      renderImage();
+
+      modal.setAttribute('aria-hidden', 'false');
+      modal.classList.add('is-open');
+      document.body.classList.add('modal-open');
+      closeButton.focus();
+    };
+
+    const closeModal = () => {
+      if (!modal.classList.contains('is-open')) return;
+
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+      if (triggerCard) triggerCard.focus();
+      activeCase = null;
+    };
+
+    modalCards.forEach((card) => {
+      card.addEventListener('click', () => openModal(card));
+      card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openModal(card);
+        }
+      });
+    });
+
+    closeButton.addEventListener('click', closeModal);
+    previousButton.addEventListener('click', () => changeImage(-1));
+    nextButton.addEventListener('click', () => changeImage(1));
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (!modal.classList.contains('is-open')) return;
+
+      if (event.key === 'Escape') {
+        closeModal();
+        return;
+      }
+      if (event.key === 'ArrowLeft' && activeCase.images.length > 1) {
+        changeImage(-1);
+        return;
+      }
+      if (event.key === 'ArrowRight' && activeCase.images.length > 1) {
+        changeImage(1);
+        return;
+      }
+      if (event.key === 'Tab') {
+        const focusableElements = Array.from(
+          panel.querySelectorAll('button:not([hidden]), [href], [tabindex]:not([tabindex="-1"])')
+        ).filter((element) => !element.disabled && element.offsetParent !== null);
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+
+        if (event.shiftKey && document.activeElement === firstElement) {
+          event.preventDefault();
+          lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+          event.preventDefault();
+          firstElement.focus();
+        }
+      }
+    });
+  })();
+</script>
 
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3bf99678ef7a49558f7ae999c1779b2a"}'></script><!-- End Cloudflare Web Analytics -->
 
