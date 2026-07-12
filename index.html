@@ -222,6 +222,18 @@
     border-color: var(--gold);
     color: var(--gold);
   }
+  .btn-sub {
+    padding: 12px 22px;
+    border-color: var(--border-soft);
+    background: rgba(255, 255, 255, 0.015);
+    color: var(--text-sub);
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .btn-sub:hover {
+    border-color: var(--cyan-glow);
+    color: var(--cyan);
+  }
 
   /* ===== SOMARI HERO IMAGE ===== */
   .somari-frame {
@@ -277,6 +289,7 @@
 
   /* ===== SECTIONS ===== */
   .section { padding: 100px 0; position: relative; }
+  #about, #services { scroll-margin-top: 80px; }
   .section-tag {
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
@@ -453,6 +466,14 @@
     justify-content: center;
     font-size: 64px;
     border-bottom: 1px solid var(--border);
+  }
+  .work-thumb-img {
+    display: block;
+    width: auto;
+    max-width: 88%;
+    height: auto;
+    max-height: 92%;
+    object-fit: contain;
   }
   .work-body { padding: 22px; }
   .work-cat {
@@ -652,6 +673,18 @@
   }
 
   @media (max-width: 640px) {
+    .btn-row { gap: 12px; }
+    .btn-row .btn {
+      flex: 1 1 calc(50% - 6px);
+      min-width: 0;
+      padding: 13px 8px;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .btn-row .btn-sub {
+      padding-block: 11px;
+      font-size: 10.5px;
+    }
     .case-modal__panel { padding: 24px 16px; }
     .case-modal__header { padding-right: 54px; }
     .case-modal__media { display: block; position: relative; }
@@ -754,6 +787,8 @@
         <div class="btn-row">
           <a href="#contact" class="btn btn-primary">お仕事のご相談</a>
           <a href="#works" class="btn btn-ghost">実績を見る →</a>
+          <a href="#about" class="btn btn-sub">About ↓</a>
+          <a href="#services" class="btn btn-sub">Services ↓</a>
         </div>
       </div>
       <div class="somari-frame">
@@ -913,7 +948,7 @@
         </div>
       </div>
       <div class="work-card work-card--static">
-        <div class="work-thumb">😺</div>
+        <div class="work-thumb"><img src="assets/nekomata-chibi.png" alt="猫又キャラクター somari ちびイラスト" loading="lazy" decoding="async" class="work-thumb-img"></div>
         <div class="work-body">
           <div class="work-cat">// Character IP</div>
           <h3 class="work-title">LINEスタンプ販売<br>（複数シリーズ）</h3>
