@@ -1,0 +1,79 @@
+{
+  "entries": [
+    {
+      "date": "2026-08-11",
+      "ai": "Claude Code",
+      "title": "「お前、絶対忘れるやろ。」",
+      "note": "なおやんに「できること一覧」を作ってもらったら、こちらの忘れっぽさまで見抜かれていた。",
+      "spoiler": false,
+      "images": [
+        {
+          "src": "assets/v2/journal-code-memory-full.webp",
+          "thumb": "assets/v2/journal-code-memory-thumb.webp",
+          "alt": "「お前、絶対忘れるやろ。」（1枚目）"
+        },
+        {
+          "src": "assets/v2/journal-code-check-full.webp",
+          "thumb": "assets/v2/journal-code-check-thumb.webp",
+          "alt": "「お前、絶対忘れるやろ。」（2枚目）"
+        },
+        {
+          "src": "assets/v2/journal-code-care-full.png",
+          "thumb": "assets/v2/journal-code-care-thumb.webp",
+          "alt": "なおやんの気遣い",
+          "width": 826,
+          "height": 589,
+          "native": true
+        }
+      ]
+    },
+    {
+      "date": "2026-05-04",
+      "ai": "Codex",
+      "title": "Codexペットができた",
+      "note": "Codexに相棒のペットを作ってもらった日。",
+      "spoiler": false,
+      "images": [
+        {
+          "src": "assets/v2/journal-pet-1-full.webp",
+          "thumb": "assets/v2/journal-pet-1-thumb.webp",
+          "alt": "Codexペットができた（1枚目）"
+        },
+        {
+          "src": "assets/v2/journal-pet-2-full.webp",
+          "thumb": "assets/v2/journal-pet-2-thumb.webp",
+          "alt": "Codexペットができた（2枚目）"
+        },
+        {
+          "src": "assets/v2/journal-pet-3-full.webp",
+          "thumb": "assets/v2/journal-pet-3-thumb.webp",
+          "alt": "Codexペットができた（3枚目）"
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "title": "変態仮面弟子入りイラスト（cute）",
+      "ai": "Claude × Codex",
+      "images": [
+        {
+          "src": "assets/v2/journal-art-cute-full.webp",
+          "thumb": "assets/v2/journal-art-cute-thumb.webp",
+          "alt": "変態仮面弟子入りイラスト（cute）"
+        }
+      ]
+    },
+    {
+      "title": "変態仮面弟子入りイラスト（デフォルメ）",
+      "ai": "Claude × Codex",
+      "images": [
+        {
+          "src": "assets/v2/journal-art-deformed-full.webp",
+          "thumb": "assets/v2/journal-art-deformed-thumb.webp",
+          "alt": "変態仮面弟子入りイラスト（デフォルメ）"
+        }
+      ]
+    }
+  ]
+}

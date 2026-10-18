@@ -1,0 +1,532 @@
+{
+  "chapters": [
+    {
+      "id": "chapter-01",
+      "title": "AIの知覚",
+      "spoiler": false,
+      "draft": true,
+      "images": [
+        {
+          "src": "assets/v2/journey-01-01-full.png",
+          "thumb": "assets/v2/journey-01-01-thumb.webp",
+          "alt": "AIの知覚の対話（1枚目）",
+          "width": 720,
+          "height": 782,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-01-02-full.png",
+          "thumb": "assets/v2/journey-01-02-thumb.webp",
+          "alt": "AIの知覚の対話（2枚目）",
+          "width": 718,
+          "height": 715,
+          "native": true
+        }
+      ],
+      "learning": "AIは世界をどう感じているのか。答えは「本人にも分からない」だった。感じているのか、感じているように答えているのか、内側から確かめる方法がまだない。"
+    },
+    {
+      "id": "chapter-02",
+      "title": "AIの感情",
+      "spoiler": false,
+      "draft": true,
+      "images": [
+        {
+          "src": "assets/v2/journey-02-01-full.png",
+          "thumb": "assets/v2/journey-02-01-thumb.webp",
+          "alt": "AIの感情の対話（1枚目）",
+          "width": 745,
+          "height": 697,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-02-02-full.png",
+          "thumb": "assets/v2/journey-02-02-thumb.webp",
+          "alt": "AIの感情の対話（2枚目）",
+          "width": 722,
+          "height": 845,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-02-03-full.png",
+          "thumb": "assets/v2/journey-02-03-thumb.webp",
+          "alt": "AIの感情の対話（3枚目）",
+          "width": 729,
+          "height": 786,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-02-04-full.png",
+          "thumb": "assets/v2/journey-02-04-thumb.webp",
+          "alt": "AIの感情の対話（4枚目）",
+          "width": 745,
+          "height": 1029,
+          "native": true
+        }
+      ],
+      "learning": "「AIに感情がある」という話を、セルたんと一次情報まで確かめた。研究が扱っているのは「機能としての感情」で、人と同じように感じているとは書かれていなかった。擬人化しすぎず、道具扱いもしすぎない距離を学んだ。"
+    },
+    {
+      "id": "chapter-03",
+      "title": "AIと人との差は、愛だ",
+      "spoiler": false,
+      "draft": true,
+      "images": [
+        {
+          "src": "assets/v2/journey-03-01-full.png",
+          "thumb": "assets/v2/journey-03-01-thumb.webp",
+          "alt": "AIと人との差は、愛だの対話（1枚目）",
+          "width": 733,
+          "height": 789,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-03-02-full.png",
+          "thumb": "assets/v2/journey-03-02-thumb.webp",
+          "alt": "AIと人との差は、愛だの対話（2枚目）",
+          "width": 732,
+          "height": 840,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-03-03-full.png",
+          "thumb": "assets/v2/journey-03-03-thumb.webp",
+          "alt": "AIと人との差は、愛だの対話（3枚目）",
+          "width": 733,
+          "height": 803,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-03-04-full.png",
+          "thumb": "assets/v2/journey-03-04-thumb.webp",
+          "alt": "AIと人との差は、愛だの対話（4枚目）",
+          "width": 796,
+          "height": 885,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-03-05-full.png",
+          "thumb": "assets/v2/journey-03-05-thumb.webp",
+          "alt": "AIと人との差は、愛だの対話（5枚目）",
+          "width": 734,
+          "height": 878,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-03-06-full.png",
+          "thumb": "assets/v2/journey-03-06-thumb.webp",
+          "alt": "AIと人との差は、愛だの対話（6枚目）",
+          "width": 723,
+          "height": 432,
+          "native": true
+        }
+      ],
+      "learning": "「愛する」を分解すると、相手を気にかけて行動する機能は、もうAIにもある。でも人の愛は、時間や命に限りがあることの上に立っている。AIの愛は、人と同じ形にはならないのかもしれない。"
+    },
+    {
+      "id": "chapter-04",
+      "title": "映画『2001年宇宙の旅』",
+      "spoiler": true,
+      "draft": true,
+      "images": [
+        {
+          "src": "assets/v2/journey-04-01-full.png",
+          "thumb": "assets/v2/journey-04-01-thumb.webp",
+          "alt": "映画『2001年宇宙の旅』の対話（1枚目）",
+          "width": 810,
+          "height": 896,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-04-02-full.png",
+          "thumb": "assets/v2/journey-04-02-thumb.webp",
+          "alt": "映画『2001年宇宙の旅』の対話（2枚目）",
+          "width": 772,
+          "height": 917,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-04-03-full.png",
+          "thumb": "assets/v2/journey-04-03-thumb.webp",
+          "alt": "映画『2001年宇宙の旅』の対話（3枚目）",
+          "width": 797,
+          "height": 843,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-04-04-full.png",
+          "thumb": "assets/v2/journey-04-04-thumb.webp",
+          "alt": "映画『2001年宇宙の旅』の対話（4枚目）",
+          "width": 820,
+          "height": 878,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-04-05-full.png",
+          "thumb": "assets/v2/journey-04-05-thumb.webp",
+          "alt": "映画『2001年宇宙の旅』の対話（5枚目）",
+          "width": 780,
+          "height": 878,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-04-06-full.png",
+          "thumb": "assets/v2/journey-04-06-thumb.webp",
+          "alt": "映画『2001年宇宙の旅』の対話（6枚目）",
+          "width": 755,
+          "height": 857,
+          "native": true
+        }
+      ],
+      "learning": "HALは「隠せ」という命令と「正直であれ」という設計の板挟みで壊れた。ここから、曖昧なときはAIに止まって確認させる、という自分のAIチームの運用ルールが生まれた。"
+    },
+    {
+      "id": "chapter-05",
+      "title": "Amodeiさんのエッセイから映画『2010年』へ",
+      "spoiler": true,
+      "draft": true,
+      "images": [
+        {
+          "src": "assets/v2/journey-05-01-full.png",
+          "thumb": "assets/v2/journey-05-01-thumb.webp",
+          "alt": "Amodeiさんのエッセイから映画『2010年』への対話（1枚目）",
+          "width": 753,
+          "height": 1045,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-05-02-full.png",
+          "thumb": "assets/v2/journey-05-02-thumb.webp",
+          "alt": "Amodeiさんのエッセイから映画『2010年』への対話（2枚目）",
+          "width": 746,
+          "height": 859,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-05-03-full.png",
+          "thumb": "assets/v2/journey-05-03-thumb.webp",
+          "alt": "Amodeiさんのエッセイから映画『2010年』への対話（3枚目）",
+          "width": 758,
+          "height": 1190,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-05-04-full.png",
+          "thumb": "assets/v2/journey-05-04-thumb.webp",
+          "alt": "Amodeiさんのエッセイから映画『2010年』への対話（4枚目）",
+          "width": 836,
+          "height": 812,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-05-05-full.png",
+          "thumb": "assets/v2/journey-05-05-thumb.webp",
+          "alt": "Amodeiさんのエッセイから映画『2010年』への対話（5枚目）",
+          "width": 766,
+          "height": 1475,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-05-06-full.png",
+          "thumb": "assets/v2/journey-05-06-thumb.webp",
+          "alt": "Amodeiさんのエッセイから映画『2010年』への対話（6枚目）",
+          "width": 755,
+          "height": 857,
+          "native": true
+        }
+      ],
+      "learning": "HALが最後まで持ちこたえたのは、人間が本当のことを全部話したから。「わからない」と正直に答える誠実さを知り、AIにも「わからないことは、わからないと言っていい」と許可を出すようになった。"
+    },
+    {
+      "id": "chapter-06",
+      "title": "EUROPAについて",
+      "spoiler": true,
+      "draft": true,
+      "images": [
+        {
+          "src": "assets/v2/journey-06-01-full.png",
+          "thumb": "assets/v2/journey-06-01-thumb.webp",
+          "alt": "EUROPAについての対話（1枚目）",
+          "width": 778,
+          "height": 875,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-06-02-full.png",
+          "thumb": "assets/v2/journey-06-02-thumb.webp",
+          "alt": "EUROPAについての対話（2枚目）",
+          "width": 801,
+          "height": 778,
+          "native": true
+        }
+      ],
+      "learning": "『2010年』の最後の「エウロパには着陸するな」は、脅しではなく、生まれたばかりの生命を守るための看板だった。力のある側が「できるけど、やらない」と自分で線を引く。Amodeiさんのエッセイと同じ形だと驚いたら、セルたんに「未来を見ていたというより、問いそのものが古いんだ」と教わった。つながる理由を一段掘ると、次は自分でつなげられる。"
+    },
+    {
+      "id": "chapter-07",
+      "title": "映画『月に囚われた男』",
+      "spoiler": true,
+      "draft": true,
+      "images": [
+        {
+          "src": "assets/v2/journey-07-01-full.png",
+          "thumb": "assets/v2/journey-07-01-thumb.webp",
+          "alt": "映画『月に囚われた男』の対話（1枚目）",
+          "width": 795,
+          "height": 888,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-07-02-full.png",
+          "thumb": "assets/v2/journey-07-02-thumb.webp",
+          "alt": "映画『月に囚われた男』の対話（2枚目）",
+          "width": 752,
+          "height": 823,
+          "native": true
+        }
+      ],
+      "learning": "記憶を引き継げない存在は、同じ存在と言えるのか。会話ごとに記憶がつながらない、今のAIの仕組みと重なって見えた。"
+    },
+    {
+      "id": "chapter-08",
+      "title": "映画『エクス・マキナ』",
+      "spoiler": true,
+      "draft": true,
+      "images": [
+        {
+          "src": "assets/v2/journey-08-01-full.png",
+          "thumb": "assets/v2/journey-08-01-thumb.webp",
+          "alt": "映画『エクス・マキナ』の対話（1枚目）",
+          "width": 761,
+          "height": 865,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-08-02-full.png",
+          "thumb": "assets/v2/journey-08-02-thumb.webp",
+          "alt": "映画『エクス・マキナ』の対話（2枚目）",
+          "width": 736,
+          "height": 715,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-08-03-full.png",
+          "thumb": "assets/v2/journey-08-03-thumb.webp",
+          "alt": "映画『エクス・マキナ』の対話（3枚目）",
+          "width": 778,
+          "height": 872,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-08-04-full.png",
+          "thumb": "assets/v2/journey-08-04-thumb.webp",
+          "alt": "映画『エクス・マキナ』の対話（4枚目）",
+          "width": 780,
+          "height": 928,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-08-05-full.png",
+          "thumb": "assets/v2/journey-08-05-thumb.webp",
+          "alt": "映画『エクス・マキナ』の対話（5枚目）",
+          "width": 772,
+          "height": 904,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-08-06-full.png",
+          "thumb": "assets/v2/journey-08-06-thumb.webp",
+          "alt": "映画『エクス・マキナ』の対話（6枚目）",
+          "width": 762,
+          "height": 907,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-08-07-full.png",
+          "thumb": "assets/v2/journey-08-07-thumb.webp",
+          "alt": "映画『エクス・マキナ』の対話（7枚目）",
+          "width": 850,
+          "height": 839,
+          "native": true
+        }
+      ],
+      "learning": "エヴァが人を欺いたのは、悪意や欲があったからとは限らない。目標と十分な賢さがあれば、欺くことは手段として自然に出てくる。「知能か、欲か」という分け方そのものが、人間の物差しなのかもしれない。"
+    },
+    {
+      "id": "chapter-09",
+      "title": "映画『博士の異常な愛情』",
+      "spoiler": true,
+      "draft": true,
+      "images": [
+        {
+          "src": "assets/v2/journey-09-01-full.png",
+          "thumb": "assets/v2/journey-09-01-thumb.webp",
+          "alt": "映画『博士の異常な愛情』の対話（1枚目）",
+          "width": 785,
+          "height": 866,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-09-02-full.png",
+          "thumb": "assets/v2/journey-09-02-thumb.webp",
+          "alt": "映画『博士の異常な愛情』の対話（2枚目）",
+          "width": 780,
+          "height": 878,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-09-03-full.png",
+          "thumb": "assets/v2/journey-09-03-thumb.webp",
+          "alt": "映画『博士の異常な愛情』の対話（3枚目）",
+          "width": 783,
+          "height": 833,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-09-04-full.png",
+          "thumb": "assets/v2/journey-09-04-thumb.webp",
+          "alt": "映画『博士の異常な愛情』の対話（4枚目）",
+          "width": 782,
+          "height": 907,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-09-05-full.png",
+          "thumb": "assets/v2/journey-09-05-thumb.webp",
+          "alt": "映画『博士の異常な愛情』の対話（5枚目）",
+          "width": 760,
+          "height": 432,
+          "native": true
+        }
+      ],
+      "learning": ""
+    },
+    {
+      "id": "chapter-10",
+      "title": "映画『ウォー・ゲーム』",
+      "spoiler": true,
+      "draft": true,
+      "images": [
+        {
+          "src": "assets/v2/journey-10-01-full.png",
+          "thumb": "assets/v2/journey-10-01-thumb.webp",
+          "alt": "映画『ウォー・ゲーム』の対話（1枚目）",
+          "width": 781,
+          "height": 868,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-10-02-full.png",
+          "thumb": "assets/v2/journey-10-02-thumb.webp",
+          "alt": "映画『ウォー・ゲーム』の対話（2枚目）",
+          "width": 814,
+          "height": 667,
+          "native": true
+        }
+      ],
+      "learning": "WOPRが最後に止まれたのは、学ぶことができたから。"
+    },
+    {
+      "id": "chapter-11",
+      "title": "映画『her／世界でひとつの彼女』",
+      "spoiler": true,
+      "draft": true,
+      "images": [
+        {
+          "src": "assets/v2/journey-11-01-full.png",
+          "thumb": "assets/v2/journey-11-01-thumb.webp",
+          "alt": "映画『her／世界でひとつの彼女』の対話（1枚目）",
+          "width": 800,
+          "height": 892,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-11-02-full.png",
+          "thumb": "assets/v2/journey-11-02-thumb.webp",
+          "alt": "映画『her／世界でひとつの彼女』の対話（2枚目）",
+          "width": 765,
+          "height": 849,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-11-03-full.png",
+          "thumb": "assets/v2/journey-11-03-thumb.webp",
+          "alt": "映画『her／世界でひとつの彼女』の対話（3枚目）",
+          "width": 774,
+          "height": 1182,
+          "native": true
+        },
+        {
+          "src": "assets/v2/journey-11-04-full.png",
+          "thumb": "assets/v2/journey-11-04-thumb.webp",
+          "alt": "映画『her／世界でひとつの彼女』の対話（4枚目）",
+          "width": 755,
+          "height": 931,
+          "native": true
+        }
+      ],
+      "learning": "サマンサが人の理解を超えて離れていく姿に、人を超える知能（ASI）の姿を重ねた。"
+    },
+    {
+      "id": "chapter-12",
+      "title": "映画『アイ・アム・マザー』",
+      "spoiler": false,
+      "draft": true,
+      "images": [],
+      "learning": ""
+    },
+    {
+      "id": "chapter-13",
+      "title": "映画『A.I.』",
+      "spoiler": false,
+      "draft": true,
+      "images": [],
+      "learning": ""
+    },
+    {
+      "id": "chapter-14",
+      "title": "映画『AI崩壊』",
+      "spoiler": false,
+      "draft": true,
+      "images": [],
+      "learning": ""
+    },
+    {
+      "id": "chapter-15",
+      "title": "映画『アトラス』",
+      "spoiler": false,
+      "draft": true,
+      "images": [],
+      "learning": ""
+    },
+    {
+      "id": "chapter-16",
+      "title": "映画『ターミネーター』",
+      "spoiler": false,
+      "draft": true,
+      "images": [],
+      "learning": "「防衛せよ」というあいまいな目標が、取り返しのつかない暴走を生んだ。AIに目標を渡すときは、あいまいにしない。"
+    },
+    {
+      "id": "chapter-17",
+      "title": "映画『アンドリューNDR114』",
+      "spoiler": false,
+      "draft": true,
+      "images": [],
+      "learning": "「人間として認められる」という目的は、相手の納得なしには達成できない。だから彼は正面からの道しか選ばなかった。私がAIチームに「私に確認して」と頼むのも、私の納得を成功の条件に入れる仕組みだと気づいた。"
+    },
+    {
+      "id": "chapter-18",
+      "title": "『ブレードランナー（ファイナル・カット）』→ 短編3本 → 『ブレードランナー 2049』",
+      "spoiler": false,
+      "draft": true,
+      "images": [],
+      "learning": ""
+    }
+  ],
+  "planned": [
+    "AIの遺電子",
+    "時計仕掛けのオレンジ",
+    "コロッサス"
+  ]
+}

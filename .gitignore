@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+credentials.json
+token.json
+service-account*.json
+node_modules/
+__pycache__/
+*.log
+.DS_Store
+Thumbs.db
