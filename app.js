@@ -274,4 +274,33 @@
   loadMoments().catch(() => {
     document.getElementById('moments-status').textContent='読み込めませんでした。ページを再読み込みしてください。';
   });
+
+  // 紹介動画：ポスターの上に再生ボタンを重ねる。押されるまで動画本体は読み込まない（preload="none"）。
+  const movie = document.getElementById('intro-movie');
+  if (movie) {
+    const play = element('button','movie-play');
+    play.type = 'button';
+    play.setAttribute('aria-label','紹介動画を再生（約1分・音が出ます）');
+    const icon = element('span','movie-play__icon');
+    icon.setAttribute('aria-hidden','true');
+    icon.innerHTML = '<svg viewBox="0 0 24 24" focusable="false"><path d="M7 4.5v15l12.5-7.5z"/></svg>';
+    const time = element('span','movie-play__time','1:05');
+    time.setAttribute('aria-hidden','true');
+    play.append(icon,time);
+    movie.controls = false;
+    // 音量の初期値：パソコンは 17% から始める。スマホは音量つまみが無く本体のボタンで調整するので、そのまま。
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) movie.volume = 0.17;
+    movie.after(play);
+    play.addEventListener('click', () => {
+      play.hidden = true;
+      movie.controls = true;
+      movie.focus();
+      movie.play().catch(() => {});
+    });
+    movie.addEventListener('ended', () => {
+      movie.load();
+      movie.controls = false;
+      play.hidden = false;
+    });
+  }
 })();
