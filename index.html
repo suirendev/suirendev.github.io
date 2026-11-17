@@ -763,6 +763,13 @@
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "x766xzwipf");
+  // Owner tag: open once with ?s=me to mark this browser (?s=notme clears it).
+  try {
+    const mark = new URLSearchParams(location.search).get('s');
+    if (mark === 'me') localStorage.setItem('owner-visit', '1');
+    if (mark === 'notme') localStorage.removeItem('owner-visit');
+    if (localStorage.getItem('owner-visit') === '1') window.clarity('set', 'visitor', 'owner');
+  } catch (e) {}
   const beacon = document.createElement('script');
   beacon.defer = true;
   beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
